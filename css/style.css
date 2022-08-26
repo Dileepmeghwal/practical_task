@@ -157,11 +157,14 @@ h3 {
   object-fit: cover;
 }
 
-.box {
-  transform: translateY(100px);
+.hero-box {
+  transform: translateY(130px);
+  position: relative;
+  left: 30px;
 }
-.box h1 {
-  font-size: 4rem;
+.hero-box h1 {
+  font-size: 3rem;
+  color: var(--header-text);
 }
 
 .grey {
@@ -377,7 +380,6 @@ body
   width: 100%;
 }
 
-
 .input_field input,
 .input_field textarea {
   width: 100%;
@@ -385,16 +387,16 @@ body
   margin: 5px 0px;
   border: none;
 }
-.input-flex{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+.input-flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
-.input-flex .input_field{
-    width: 49%;
+.input-flex .input_field {
+  width: 49%;
 }
-.input-flex .input_field input{
-    width: 100%;
+.input-flex .input_field input {
+  width: 100%;
 }
 .send {
   width: 150px;
@@ -480,6 +482,13 @@ body
     height: 160px;
     transform: rotateY(180deg);
   }
+  .hero-box {
+    left: 0px;
+  }
+  .hero-box h1 {
+  font-size: 5rem;
+  color: var(--header-text);
+}
   .about__area {
     display: grid;
     grid-template-columns: 1fr 1fr;

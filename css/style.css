@@ -133,7 +133,7 @@ h3 {
   position: relative;
   display: block;
   width: calc(152% + 1.3px);
-  height: 120px;
+  height: 60px;
   transform: rotateY(180deg);
 }
 
@@ -148,13 +148,14 @@ h3 {
 }
 .hero__box {
   width: 100%;
-  min-height: 90vh;
+  min-height: 60vh;
   background: linear-gradient(
       rgba(92, 193, 24, 0.567),
       rgba(244, 244, 13, 0.75)
     ),
     url(../img/pexels-matthis-2326912.jpg);
   object-fit: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-box {
@@ -214,7 +215,7 @@ h3 {
   font-size: 2rem;
 }
 .about__area .textBox p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.6;
 }
 
@@ -238,13 +239,13 @@ h3 {
   margin-top: 1.5rem;
 }
 .blob {
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
   background-color: var(--middle-banner);
   position: absolute;
   border-radius: 100%;
-  top: 0px;
-  right: -40px;
+  top: 180px;
+  right: -140px;
   z-index: -1;
 }
 
@@ -459,7 +460,7 @@ body
 
 .footer__wrap .boxs p {
   color: var(--header-text);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-left: 1rem;
 }
 
@@ -469,12 +470,19 @@ body
   padding: 12px 5px;
 }
 .copyright p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
   color: var(--header-text);
 }
 
 @media screen and (min-width: 950px) {
+  p {
+    font-size: 1.9rem;
+  }
+  .hero__box {
+    width: 100%;
+    min-height: 80vh;
+  }
   .custom-shape-divider-bottom-1661492511 svg {
     position: relative;
     display: block;
@@ -486,14 +494,24 @@ body
     left: 0px;
   }
   .hero-box h1 {
-  font-size: 5rem;
-  color: var(--header-text);
-}
+    font-size: 5rem;
+    color: var(--header-text);
+  }
   .about__area {
     display: grid;
     grid-template-columns: 1fr 1fr;
     flex-direction: row;
     align-items: center;
+  }
+  .blob {
+    width: 500px;
+    height: 500px;
+    background-color: var(--middle-banner);
+    position: absolute;
+    border-radius: 100%;
+    top: 0px;
+    right: -100px;
+    z-index: -1;
   }
   .project__wrap {
     display: grid;
@@ -506,5 +524,8 @@ body
     justify-content: center;
     align-items: center;
     gap: 50px;
+  }
+  .copyright p {
+    font-size: 1.4rem;
   }
 }

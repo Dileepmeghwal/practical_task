@@ -33,7 +33,7 @@ a {
 h1,
 h2,
 h3 {
-  font-size: 5rem;
+  font-size: 2.5rem;
 }
 .header {
   width: 100%;
@@ -476,9 +476,7 @@ body
 }
 
 @media screen and (min-width: 950px) {
-  p {
-    font-size: 1.9rem;
-  }
+
   .hero__box {
     width: 100%;
     min-height: 80vh;
@@ -494,7 +492,7 @@ body
     left: 0px;
   }
   .hero-box h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
     color: var(--header-text);
   }
   .about__area {
@@ -526,6 +524,6 @@ body
     gap: 50px;
   }
   .copyright p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }

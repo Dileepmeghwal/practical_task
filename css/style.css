@@ -33,7 +33,7 @@ a {
 h1,
 h2,
 h3 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 .header {
   width: 100%;
@@ -73,7 +73,24 @@ h3 {
 .nav-link {
   font-size: 1.8rem;
   color: var(--header-text);
+  position: relative;
+  text-transform: uppercase;
 }
+.nav-link::after{
+  content:  '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--red-btn);
+  left: 0;
+  bottom: -5px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.nav-link:hover::after{
+  width: 100%;
+}
+
 .humburger {
   display: none;
   margin: 14px 10px;
@@ -91,7 +108,7 @@ h3 {
 @media screen and (max-width: 950px) {
   .nav-menu {
     position: fixed;
-    top: 0px;
+    top: 0%;
     right: -100%;
     flex-direction: column;
     text-align: left;
@@ -99,6 +116,7 @@ h3 {
     background-color: var(--header-bg);
     height: 100vh;
     transition: all 0.3s ease;
+    margin-top: 80px
   }
   .humburger {
     display: block;
@@ -116,7 +134,7 @@ h3 {
     transform: translateY(-8px) rotate(-45deg);
   }
   .nav-menu.active {
-    right: 0;
+    right: 0%;
   }
 }
 
@@ -129,6 +147,26 @@ h3 {
   line-height: 0;
 }
 
+.active-link{
+  background-color: yellow;
+}
+body > div.owl-carousel.owl-theme.owl-loaded.owl-drag > div.owl-nav > button.owl-prev,
+body > div.owl-carousel.owl-theme.owl-loaded.owl-drag > div.owl-nav > button.owl-next{
+  width: 50px;
+  height: 50px;
+  background-color: var(--red-btn);
+  color: var(--header-text);
+  border-radius: 100%;
+  font-size: 2rem;
+}
+body > div.owl-carousel.owl-theme.owl-loaded.owl-drag > div.owl-nav > button.owl-next{
+  background-color: var(--header-bg);
+}
+.owl-theme .owl-nav{
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+}
 .custom-shape-divider-bottom-1661492511 svg {
   position: relative;
   display: block;
@@ -145,6 +183,7 @@ h3 {
 .container {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 2rem;
 }
 .hero__box {
   width: 100%;
@@ -156,6 +195,7 @@ h3 {
     url(../img/pexels-matthis-2326912.jpg);
   object-fit: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .hero-box {
@@ -212,7 +252,7 @@ h3 {
   padding: 1rem;
 }
 .about__area .textBox h2 {
-  font-size: 2rem;
+  font-size: 2.4rem;
 }
 .about__area .textBox p {
   font-size: 1.3rem;
@@ -476,7 +516,9 @@ body
 }
 
 @media screen and (min-width: 950px) {
-
+  .container{
+    padding: 0;
+  }
   .hero__box {
     width: 100%;
     min-height: 80vh;
@@ -515,6 +557,11 @@ body
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2rem;
+  }
+  .owl-theme .owl-nav{
+    position: absolute;
+    right: 120px;
+    bottom: 120px;
   }
   .footer__wrap {
     display: grid;
